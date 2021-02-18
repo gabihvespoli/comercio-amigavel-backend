@@ -1,10 +1,10 @@
 const mysql = require('mysql');
 
 const connection = mysql.createConnection({
-    host: "sql208.epizy.com",
-    user: "epiz_27956737",
-    password: "UGIQJLS0H7Ga",
-    database: "epiz_27956737_comercioamigavel"
+    host: process.env.COM_HOST,
+    user: process.env.COM_USER,
+    password: process.env.COM_PASSWORD,
+    database: process.env.COM_DATABASE
 });
 
 module.exports = connection;
