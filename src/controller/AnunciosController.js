@@ -28,4 +28,4 @@ class AnunciosController {
   }
 }
 
-module.exports = new AnunciosController();
+module.exports = new AnunciosController
