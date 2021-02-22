@@ -61,3 +61,5 @@ ALTER TABLE `vendedor`
 
 ALTER TABLE `anuncios`
   ADD CONSTRAINT `fk_anuncios` FOREIGN KEY (`id_vendedor`) REFERENCES `vendedor` (`id`);
+
+  
