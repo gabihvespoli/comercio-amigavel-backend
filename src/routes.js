@@ -13,8 +13,20 @@ const LoginController = require('./controller/LoginController');
 const routes = new Router;
 
 routes.get(
+    "/",
+    (req,res) => {
+        res.send('Comércio Amigável')
+    }
+)
+
+routes.get(
     "/anuncios",
     AnunciosController.getAllAction
+)
+
+routes.get(
+    "/anuncios/:id",
+    AnunciosController.getAllOfOneVendedorAction
 )
 
 routes.post(

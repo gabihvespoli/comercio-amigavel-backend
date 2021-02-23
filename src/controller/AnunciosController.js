@@ -7,6 +7,12 @@ class AnunciosController {
         anuncio.getAll(req,res)
     }
 
+    getAllOfOneVendedorAction(req,res) {
+        const { id } = req.params;
+        anuncio.id_vendedor = id;
+        anuncio.getAllOfOneVendedorAction(req,res);
+    }
+
     postarAnuncioAction(req,res) {
         const errors = validationResult(req);
         if (!errors.isEmpty()) {
@@ -38,13 +44,11 @@ class AnunciosController {
         const img = req.file
         const { id } = req.params
 
-        if(!img) {
-            return res.status(400).json({errors: [{msg: "* campo obrigatório!",param: "img"}]})
+        if(img) {
+            anuncio.img = img.filename;
         }
 
-        anuncio.id = id;
-        anuncio.id_vendedor = id_vendedor;
-        anuncio.img = img.filename;
+        anuncio.id = id;       
         anuncio.descricao = descricao;
         anuncio.valor = valor;
         anuncio.doacao = doacao;
