@@ -5,12 +5,11 @@ CREATE TABLE `anuncios` (
   `id` int(11) NOT NULL,
   `id_vendedor` int(11) NOT NULL,
   `img` varchar(500) NOT NULL,
+  `img_key` varchar(40) NOT NULL,
   `descricao` varchar(70) NOT NULL,
   `valor` varchar(70) NOT NULL,
   `doacao` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
-TRUNCATE TABLE `anuncios`;
 
 CREATE TABLE `cliente` (
   `id` int(11) NOT NULL,
@@ -18,8 +17,6 @@ CREATE TABLE `cliente` (
   `email` varchar(70) NOT NULL,
   `senha` char(64) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
-TRUNCATE TABLE `cliente`;
 
 CREATE TABLE `vendedor` (
   `id` int(11) NOT NULL,
@@ -30,10 +27,9 @@ CREATE TABLE `vendedor` (
   `telefone` varchar(15) NOT NULL,
   `email` varchar(150) NOT NULL,
   `senha` char(64) NOT NULL,
-  `img_perfil` varchar(500) NOT NULL DEFAULT 'perfil-sem-foto.jpg'
+  `img_perfil` varchar(500) NOT NULL DEFAULT 'perfil-sem-foto.jpg',
+  `img_key` varchar(40) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
-TRUNCATE TABLE `vendedor`;
 
 ALTER TABLE `anuncios`
   ADD PRIMARY KEY (`id`),
