@@ -16,6 +16,7 @@
   "dependencies": {
     "aws-sdk": "^2.859.0",
     "cors": "^2.8.5",
+    "cors-anywhere": "^0.4.4",
     "cpf-cnpj-validator": "^1.0.3",
     "crypto": "^1.0.1",
     "dotenv": "^8.2.0",
