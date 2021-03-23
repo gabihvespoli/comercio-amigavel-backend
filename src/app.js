@@ -13,7 +13,12 @@ class App {
     }
 
     middlewares() {
-        this.server.use(cors());
+        this.server.use((req, res, next) => {
+            res.header("Access-Control-Allow-Origin", "*");
+            res.header("Access-Control-Allow-Methods", 'GET,PUT,POST,DELETE');
+            app.use(cors());
+            next();
+        });
         this.server.use(express.json());
         this.server.use('/uploads',express.static('uploads'))
     }
