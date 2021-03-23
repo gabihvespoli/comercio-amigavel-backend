@@ -23,7 +23,7 @@ class App {
     //     this.server.use(express.json());
     //     this.server.use('/uploads',express.static('uploads'))
     // }
-    
+
     middlewares() {
         this.server.use(cors());
         this.server.use(express.json());
