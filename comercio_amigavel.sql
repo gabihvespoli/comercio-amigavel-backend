@@ -27,7 +27,7 @@ CREATE TABLE `vendedor` (
   `telefone` varchar(15) NOT NULL,
   `email` varchar(150) NOT NULL,
   `senha` char(64) NOT NULL,
-  `img_perfil` varchar(500) NOT NULL DEFAULT 'perfil-sem-foto.jpg',
+  `img_perfil` varchar(500) NOT NULL DEFAULT '/images/perfil-sem-foto.jpg',
   `img_key` varchar(40) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
